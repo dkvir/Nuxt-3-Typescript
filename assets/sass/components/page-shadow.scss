@@ -1,0 +1,51 @@
+[data-layer-shadow] {
+  position: relative;
+  &[data-color="white"] {
+    --shadow-color: var(--color-mercury);
+  }
+  .shadow-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+    pointer-events: none;
+    &[data-position="both"],
+    &[data-position="top"]:before,
+    &[data-position="bottom"]:after {
+      --shadow-visibility: block;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: sticky;
+      top: 0;
+      left: 0;
+      display: var(--shadow-visibility, none);
+      width: var(--viewport-width);
+      z-index: 4;
+    }
+    &:before {
+      height: var(--top-shadow-height, 200px);
+      background: linear-gradient(
+        to top,
+        rgba(229, 229, 229, 0) 0%,
+        var(--shadow-color, var(--color-black)) 100%
+      );
+      @include parent-state("[data-only='bottom']") {
+        display: none;
+      }
+    }
+    &:after {
+      top: calc(100vh - 200px);
+      height: var(--bottom-shadow-height, 200px);
+      background: linear-gradient(
+        to bottom,
+        rgba(229, 229, 229, 0) 0%,
+        var(--shadow-color, var(--color-black)) 100%
+      );
+      @include parent-state("[data-only='top']") {
+        display: none;
+      }
+    }
+  }
+}

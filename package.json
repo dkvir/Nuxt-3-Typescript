@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "svg-icon": "vsvg -s ./public/svg-icon -t ./config/vectors --es6"
+  },
+  "devDependencies": {
+    "@types/dat.gui": "^0.7.7",
+    "@types/node": "^18.14.2",
+    "@types/three": "^0.149.0",
+    "@vueuse/core": "^9.13.0",
+    "dat.gui": "^0.7.9",
+    "nuxt": "^3.1.1",
+    "sass": "1.53.0",
+    "sass-loader": "^13.2.0",
+    "three": "^0.150.1"
+  },
+  "dependencies": {
+    "vue-svgicon": "^3.3.0"
+  }
+}

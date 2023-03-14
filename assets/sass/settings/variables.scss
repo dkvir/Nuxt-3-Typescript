@@ -1,0 +1,26 @@
+@use "sass:math";
+
+$default-window-width: 1920 !default;
+$default-window-height: 1080 !default;
+
+$default-timing-speed: 0.25s;
+$default-timing-func: ease-in-out;
+
+$square-size: 20px;
+
+$sizes: "xxs", "xs", "s", "m", "l", "xl", "xxl", "3xl", "4xl", "5xl";
+
+$colors: (
+  "black": #000016,
+  "white": #fff,
+  "mercury-solid": #e5e5e5,
+  "caribbean": #00bfa0,
+  "mercury": #e4e4e4,
+  "french-gray": #cdcdcf,
+  "transparent": transparent,
+  "dust": #b7b7bb,
+);
+
+$fonts: (
+  "monarch": "WT_Monarch",
+);
