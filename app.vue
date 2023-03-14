@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import seo from '~/content/seo';
-import '~/config/vectors';
 
 useServerSeoMeta({
   title: seo.title,
